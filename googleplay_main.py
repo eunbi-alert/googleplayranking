@@ -35,7 +35,7 @@ dayOfWeekToday = datetime.now().strftime("%A")
 ####메일 보내기
 myAccount = 'eunbi.alert@gmail.com'
 myPw = 'eunbialert123'
-sendTo = 'eunbi66@ncsoft.com'
+sendTo = 'cdg@ncsoft.com'
 subject = '{} 국내 Google Play Top 50'.format(today)
 
 gmail = SendGmail(myAccount, myPw, sendTo, subject)
@@ -45,5 +45,5 @@ for i in analyzedList:
 gmail.html += "</table></body>"
 #<td><img src ='https:{}' width='50px' height='50px'></td>
 
-#gmail.send() if dayOfWeekToday == "Monday" else None
-gmail.send()
+gmail.send() if dayOfWeekToday == "Monday" else None
+#gmail.send()
